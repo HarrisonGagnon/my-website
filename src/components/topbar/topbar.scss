@@ -1,0 +1,72 @@
+@import "../../global.scss";
+
+.topbar {
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    color: $menuColor;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    transition: all 1s ease;
+
+    .wrapper {
+        padding: 10px 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .left {
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+
+            .logo {
+                display: flex;
+            }
+        }
+
+        .right {
+
+            width: 20%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+
+            .link-icon{
+                margin-right: 15px;
+            }
+
+            .hamburger {
+                display: flex;
+                cursor: pointer;
+                margin-left: 15%;
+
+                span {
+                    display: flex;
+                    font-size: 45px;
+                    color: $menuColor;
+                    transition: all 1s ease;
+                }
+            }
+        }
+    }
+
+    &.active {
+        background-color: $menuColor;
+        color: white;
+        .right {
+
+            .hamburger {
+
+                span {
+                    color: white;
+                    transition: all 1s ease;
+                }
+            }
+        }
+    }
+}
